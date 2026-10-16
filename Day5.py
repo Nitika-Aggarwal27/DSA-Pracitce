@@ -38,3 +38,26 @@
             # 3. O(log n)   |  Logarithmic space    | Binary Search Recursion
             # 4. O(n^2)     |  Quadratic space      | Matrix / 2D array problems
 
+# --------------------------------------------------------------------------------------------------------->
+
+# How to Caluculate Time Complexity?
+    # 1. Count loops and recursive calls.
+    # 2. Focus on the dominant term.
+    # 3. Ignore constants.
+        #  Example: O(2n) -> O(n)
+
+# --------------------------------------------------------------------------------------------------------->
+
+# How to Calculate Space Complexity?
+    # 1. Count extra memory used.
+    # 2. Include arrays, recursion stack, hash maps etc.
+    # 3. Ignore input storage.
+
+# --------------------------------------------------------------------------------------------------------->
+
+# Beginner Tips:
+    # 1. Single loop: -> O(n)
+    # 2. Nested loops: -> O(n^2)
+    # 3. Recursion: -> consider call stack size
+    # 4. Efficient sorting: -> O(n log n)
+    # 5. Hashing access: -> usually O(1)
