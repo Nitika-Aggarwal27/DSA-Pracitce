@@ -1,0 +1,1 @@
+# Practice question on greedy algorithm
