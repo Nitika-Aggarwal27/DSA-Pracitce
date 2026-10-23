@@ -1,4 +1,4 @@
-# queation on array -1D, 2D, dynamic array
+# question on array -1D, 2D, dynamic array
 
 # Ques1: Running Sum of 1d array (leetcode-1480)
 # Explanation: Input: nums = [1,2,3,4]
@@ -26,9 +26,9 @@ print(array1)
 # sol:
 print("Concatenation of 1d array:")
 arr2 = [1,3,4,5]
-for row in arr2:
-    
-
+brr = arr2
+brr = brr+arr2
+print(brr)
 
 # 2nd method:
 # def getConcatenation(nums):
@@ -41,8 +41,33 @@ for row in arr2:
 # sol:
 print("Kids with Greatest Candies:")
 arr4 = [1,3,4,5]
+ec=3
+maxi= 0
+for row in arr4:
+    if(maxi<= row):
+        maxi= row
+    row+=ec
+    print(row)
 
+for row in arr4:
+    if(maxi<=row + ec):
+        print(True)
+    else: print(False)
 
+# print(maxi)
+print(row)
+
+# 2nd m method:
+# arr43 = [8, 3, 4, 5]
+# ec2 = 3
+# greatest = max(arr43)
+# for row in arr43:
+#     print(row + ec2 >= greatest)
+
+# 3rd method:
+# def kidsWithCandies(candies, extra):
+#   max_c = max(candies)
+#   return [c + extra >= max_c for c in candies]
 
 
 # Ques5: Smaller Numbers Than Current (leetcode-1365)
@@ -51,8 +76,19 @@ arr4 = [1,3,4,5]
 # sol:
 print("Smaller Numbers Than Current:")
 arr5 = [1,3,4,5]
+ans2 = []
+for row in arr5:
+    count = 0
+    for col in arr5:
+        if(col< row):
+            count+=1
+    ans2.append(count)
 
+print(ans2)
 
+# 2nd Method:
+# def smallerNumbersThanCurrent(nums):
+#     return [sum(n < x for n in nums) for x in nums]
 
 
 # Ques6: Subarray Sum Equals K (O(n^2)) (leetcode-560)
@@ -60,9 +96,31 @@ arr5 = [1,3,4,5]
 # Output: 2
 # sol:
 print("Subarray Sum Equals K (O(n^2)):")
-arr6 = [1,3,4,5]
+arr6 = [1,1,1]
+k = 2
+counti = 0
 
+for row in range(len(arr6)):
+    sumy = 0
+    for y in range(row, len(arr6)):
+        sumy +=arr6[y] 
+        if(sumy == k):
+            counti+=1
 
+print(counti)
+
+# 2nd method:(same as 1st method just write by using functions in 2nd method)
+# def subarraySum(nums, k):
+    # n = len(nums)
+    # count = 0
+    # for i in range(n):
+        # total = 0
+        # for j in range(i, n):
+            # total += nums[j]
+            # if total == k:
+                # count += 1
+
+# return count
 
 
 
